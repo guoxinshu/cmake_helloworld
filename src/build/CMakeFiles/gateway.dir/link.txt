@@ -1,0 +1,1 @@
+/usr/bin/cc    -pthread  -lzmq CMakeFiles/gateway.dir/src/main.c.o  -o gateway -rdynamic 
