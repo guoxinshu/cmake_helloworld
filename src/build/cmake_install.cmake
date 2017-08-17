@@ -1,4 +1,4 @@
-# Install script for directory: /home/gxs/work/xc_gateway/openwrt/bin/ramips/OpenWrt-SDK-ramips-mt7628_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/package/helloworld/src
+# Install script for directory: /home/gxs/work/xc_gateway/openwrt/bin/ramips/OpenWrt-SDK-ramips-mt7628_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/package/cmake_helloworld/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,13 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gateway"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/gxs/work/xc_gateway/openwrt/bin/ramips/OpenWrt-SDK-ramips-mt7628_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/package/helloworld/src/build/gateway")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/gxs/work/xc_gateway/openwrt/bin/ramips/OpenWrt-SDK-ramips-mt7628_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/package/cmake_helloworld/src/build/gateway")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gateway" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gateway")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gateway"
+         OLD_RPATH "/usr/local/lib:"
+         NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/gateway")
     endif()
@@ -56,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gxs/work/xc_gateway/openwrt/bin/ramips/OpenWrt-SDK-ramips-mt7628_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/package/helloworld/src/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gxs/work/xc_gateway/openwrt/bin/ramips/OpenWrt-SDK-ramips-mt7628_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/package/cmake_helloworld/src/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
