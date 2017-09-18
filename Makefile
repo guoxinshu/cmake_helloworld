@@ -7,9 +7,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_VENDOR:=upointech
-PKG_NAME:=gateway
+PKG_NAME:=xc_sdk
 PKG_VERSION:=1
-PKG_BASE_NAME:=gateway
+PKG_BASE_NAME:=xc_sdk
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_BASE_NAME)-$(PKG_VERSION)
 
 
@@ -21,9 +21,9 @@ define Package/$(PKG_NAME)
   SECTION:=base
   CATEGORY:=Upointech
   TITLE:= Smart gateway demo application
-  URL:=http://www.upointech.com/
+  URL:=http://www.ixiaocong.com/
   MAINTAINER:=Upointech
-  DEPENDS:= +libpthread +libzmq 
+  DEPENDS:= +libpthread 
 endef
 
 define Package/$(PKG_NAME)/description
