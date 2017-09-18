@@ -27,6 +27,5 @@ ADD_EXECUTABLE(gateway ${SOURCES})
 
 # link library
 TARGET_LINK_LIBRARIES(gateway pthread)
-TARGET_LINK_LIBRARIES(gateway zmq)
 
 INSTALL(TARGETS gateway RUNTIME DESTINATION bin)
