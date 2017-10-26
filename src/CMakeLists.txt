@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
-PROJECT(gateway)
+set (PRODUCT_NAME test)
+
+PROJECT(${PRODUCT_NAME})
 
 # The version number.
 set (Tutorial_VERSION_MAJOR 2)
@@ -23,9 +25,9 @@ include_directories("${PROJECT_SOURCE_DIR}/${INCLUDE_DIR}")
 
 SET(SOURCES	${SOURCES_DIR}/main.c)
 
-ADD_EXECUTABLE(gateway ${SOURCES})
+ADD_EXECUTABLE(${PRODUCT_NAME} ${SOURCES})
 
 # link library
-TARGET_LINK_LIBRARIES(gateway pthread)
+TARGET_LINK_LIBRARIES(${PRODUCT_NAME} pthread)
 
-INSTALL(TARGETS gateway RUNTIME DESTINATION bin)
+INSTALL(TARGETS ${PRODUCT_NAME} RUNTIME DESTINATION bin)
