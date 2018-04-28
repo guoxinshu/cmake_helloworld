@@ -7,9 +7,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_VENDOR:=upointech
-PKG_NAME:=xc_sdk
+PKG_NAME:=JsGW
 PKG_VERSION:=1
-PKG_BASE_NAME:=xc_sdk
+PKG_BASE_NAME:=JsGW
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_BASE_NAME)-$(PKG_VERSION)
 
 
@@ -43,7 +43,7 @@ endef
 
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/gateway $(1)/bin/$(PKG_NAME)
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/main $(1)/bin/$(PKG_NAME)
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
