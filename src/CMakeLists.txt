@@ -3,22 +3,26 @@ set (PRODUCT_NAME main)
 
 PROJECT(${PRODUCT_NAME})
 
-set (SOURCES_DIR src)
-set (INCLUDE_DIR include)
-set (INCLUDE_IN_DIR mould)
+
+ADD_SUBDIRECTORY(lib)
+
 
 LINK_DIRECTORIES(/usr/local/lib)
 
 ADD_DEFINITIONS( -g -Wall )
 
 #set .h dir
-include_directories("${PROJECT_SOURCE_DIR}/${INCLUDE_DIR}")
+include_directories("${PROJECT_SOURCE_DIR}/include"
+    "${PROJECT_SOURCE_DIR}/lib/xslib"
+    
+    )
 
-SET(SOURCES	${SOURCES_DIR}/main.c)
+aux_source_directory(src SOURCES)
 
 ADD_EXECUTABLE(${PRODUCT_NAME} ${SOURCES})
 
 # link library
-TARGET_LINK_LIBRARIES(${PRODUCT_NAME} pthread)
+#TARGET_LINK_LIBRARIES(${PRODUCT_NAME} pthread)
+TARGET_LINK_LIBRARIES(${PRODUCT_NAME} xslib)
 
 INSTALL(TARGETS ${PRODUCT_NAME} RUNTIME DESTINATION bin)
